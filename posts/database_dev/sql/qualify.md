@@ -18,5 +18,8 @@ Let’s look at the same example we worked with last week, where we want the nam
 
 
 
+[posts](https://www.linkedin.com/posts/meganlieu_sql-coding-datascience-activity-6970521407801688064-QGPn?utm_source=share&utm_medium=member_desktop)
+
 #SQL #coding #datascience
-[source](https://www.linkedin.com/posts/meganlieu_sql-coding-datascience-activity-6970521407801688064-QGPn?utm_source=share&utm_medium=member_desktop)
+
+![img](../../img/1661901809210.jpg)
