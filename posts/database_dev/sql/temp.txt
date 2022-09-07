@@ -1,0 +1,120 @@
+How is a SQL statement executed in the database?
+
+Step 1 - A SQL statement is sent to the database via a transport layer protocol (e.g.TCP).
+Step 2 - The SQL statement is sent to the command parser, where it goes through syntactic and semantic analysis, and a query tree is generated afterward.
+Step 3 - The query tree is sent to the optimizer. The optimizer creates an execution plan. 
+Step 4 - The execution plan is sent to the executor. The executor retrieves data from the execution.
+Step 5 - Access methods provide the data fetching logic required for execution, retrieving data from the storage engine. 
+Step 6 - Access methods decide whether the SQL statement is read-only. If the query is read-only (SELECT statement), it is passed to the buffer manager for further processing. The buffer manager looks for the data in the cache or data files.
+Step 7 - If the statement is an UPDATE or INSERT, it is passed to the transaction manager for further processing.
+Step 8 - During a transaction, the data is in lock mode. This is guaranteed by the lock manager. It also ensures the transaction’s ACID properties. 
+
+https://www.linkedin.com/posts/majid-qafouri_ep20-how-sql-works-under-the-hood-also-activity-6970990783956975616-IAIv?utm_source=share&utm_medium=member_desktop
+
+SQL operations like GROUP BY, COUNT(*), DISTINCT and ORDER BY are so simple - but also very useful when exploring a new dataset.
+
+Want to quickly find the most frequent values for a column? Use a GROUP BY, COUNT(*) and ORDER BY DESC
+
+Want to find out how many duplicates there are in a table? Compare COUNT(DISTINCT *) with COUNT(*)
+
+Want to get a feel for how many null values there are? Compare COUNT(<column-name>) with a COUNT(*) or simply run a COUNT(*) with a WHERE filter to remove the null values
+
+There are many ways to skin the proverbial SQL cat - but these simple fundamentals will take you a long way!
+
+Hope this helps 🙂
+
+Want to learn more SQL, data analytics and data science with me? Follow Danny Ma for more tips like this!
+
+wowwwww did you know that you can access the first ever Node.js version on GitHub and explore its timeline by just browsing the git history? 😬🔥
+
+It was early 2009 when Node.js got its first commit from its maker, Ryan Dahl, and today it is one of the most impacting project for the Web worldwide.
+
+It's funny to see the history and check some commit messages such as "intermediate commit. nothing works.", "first compile", "add some printfs..", "request.respond works" and many others 🤣
+
+Looking back, it seems that this first version was like a Proof of Concept. I'll share now what are the thoughts I had when looking at the source code.
+
+The whole idea was to use Chrome's V8 API which was an engine made to interpret and execute JavaScript code in the browser.
+
+In the first commit, he started creating HTTP Servers using the libebb, a lightweight high-performance HTTP server library for C, making interoperation with JavaScript where the JS Code would receive messages from the C++ and back and forth.
+
+As far as I read the code, the first commits didn't the libev or libuv to manage async I/O operations as it's popular nowadays.
+
+Instead, he used the liboi, an OpenCL Interferometry Library for C (which I have no idea what means 😂) to manage the event loop and changed it to a most performative event loop library then, the libev, right on the v.1.0.1
+
+Back then, Node.js was 99% C/C++ code and he actually built a JavaScript-to-C script in Python to overcome some limitations he might have found when executing JS Scripts on the V8 Engine.
+
+I love going back to feel how some tools became so popular, how a simple Proof Of Concept would change the Wide Web for good!
+
+If you ask me now, I'd say C++ was/is the most powerful language ever. It's crazy to see how many great tools were built on top of it (and still it has been)
+
+
+𝗪𝗵𝘆 𝗨𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱𝗶𝗻𝗴 𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗣𝗿𝗼𝗰𝗲𝘀𝘀 𝗠𝗮𝘁𝘂𝗿𝗶𝘁𝘆 𝗮𝗻𝗱 𝗠𝗮𝘀𝘁𝗲𝗿𝗶𝗻𝗴 𝘁𝗵𝗲 𝗕𝗮𝘀𝗶𝗰𝘀 𝗶𝘀 𝗮𝗻 𝗲𝘀𝘀𝗲𝗻𝘁𝗶𝗮𝗹 𝗲𝗹𝗲𝗺𝗲𝗻𝘁 𝗼𝗳 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹 𝗘𝗥𝗣 𝗜𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻𝘀
+When a company decides to implement a new ERP or CRM solution, it usually recognises that there is going to be considerable change and impact on the organisation.
+ 
+There will be changes in underlying software and technology, changes in job roles and responsibilities and changes in business processes.
+ 
+Implementing a new ERP or CRM solution across a business can sometimes feel like a marathon and there is often a tendency for
+business users to want to sprint straight to the end of the race.
+ 
+Successful ERP and CRM implementation projects have common themes.
+ 
+✅ They recognise the maturity of processes currently used in the business.
+ 
+✅ They acknowledge there will be a gap between the ultimate process and the current process that determines what should be in the first release of the ERP or CRM at "go-live".
+ 
+✅ They know that taking manageable and measurable steps in business process improvement is the best foundation for continuous improvement.
+ 
+Combined Management Consultants uses the concept of "𝗖𝗿𝗮𝘄𝗹 𝗪𝗮𝗹𝗸 𝗥𝘂𝗻" when implementing new technology and business processes across a complex enterprise wide project that may extend over multiple years. 
+ 
+The concept of "𝗖𝗿𝗮𝘄𝗹 𝗪𝗮𝗹𝗸 𝗥𝘂𝗻" recognises that there are certain steps that need to be completed before the organisation moves onto other stages of the implementation.
+ 
+This is about continuous improvement. First mastering the basics of the new ERP or CRM solution, then extending the capabilities
+before maximizing the outcomes.
+ 
+I will share an infographic in the feed below that explains the alignment of capabilities supported by a well documented technology strategy.
+
+Keen for your thoughts and/or feedback.
+
+
+Ikuti
+Yth. rekan-rekan fresh graduate, calon pekerja,
+
+Dalam aturan ketenagakerjaan kita, pekerja dengan kontrak PKWT atau PKWTT juga memiliki hak cuti keperluan khusus/alasan tertentu dan tetap dibayarkan upahnya:
+
+1. Pekerja menikah: 3 hari
+2. Menikahkan anaknya: 2 hari
+3. Mengkhitankan anaknya: 2 hari
+4. Membaptiskan anaknya: 2 hari
+5. Istri melahirkan/keguguran: 2 hari
+6. Suami/istri, orang tua, mertua, anak dan/atau menantu meninggal dunia: 2 hari
+7. Anggota keluarga selain yang disebutkan di atas yang tinggal dalam 1 rumah meninggal dunia: 1 hari
+
+Jadi, kalau nanti bekerja dan terjadi hal-hal di atas tidak memotong hak cuti tahunannya ya.
+
+Sehat selalu.
+
+yield return
+
+https://www.linkedin.com/posts/meganlieu_sql-coding-datascience-activity-6967984494523912192-3RMY?utm_source=share&utm_medium=member_desktop
+
+
+
+https://universalglue.dev/posts/csv-to-sqlite/
+
+𝗧𝗵𝗲 𝗠𝗼𝘀𝘁 𝗜𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 𝗢𝗳 𝗘𝘃𝗲𝗿𝘆 𝗠𝗼𝗱𝗲𝗿𝗻 𝗖# 𝗩𝗲𝗿𝘀𝗶𝗼𝗻
+
+- 𝗖# 𝟱 (async / await, caller info attributes).
+- 𝗖# 𝟲 (? and nameof operators, static imports, exception filters, Roslyn).
+- 𝗖# 𝟳 (pattern matching, local functions, ref locals and returns, out variables).
+- 𝗖# 𝟴 (static local functions, nullable reference types, default interface methods).
+- 𝗖# 𝟵 (records, targed-types new, top-level statemens).
+- 𝗖# 𝟭𝟬 (record structs, global usings, file-scoped namespaces).
+- 𝗖# 𝟭𝟭 (static abstract interface methods, list patterns, required properties, raw string literals).
+
+Which one you like/use ? Write in the comments.
+
+✍ If you like my posts please follow me Dr. Milan Milanović and hit the 🔔 on my profile to get a notification for all my new posts. I regularly share Software Engineering, Cloud, DevOps, Engineering Management, Leadership, Productivity and various Tech tips/resources.
+https://www.linkedin.com/posts/milanmilanovic_csharp-dotnet-microsoft-activity-6971720982994534401-Gnhk?utm_source=share&utm_medium=member_desktop
+
+
+https://www.linkedin.com/posts/datawithdanny_sql-data-analytics-activity-6971799267170516992-YOvv?utm_source=share&utm_medium=member_desktop
